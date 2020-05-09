@@ -5,11 +5,10 @@ class Calculator {
         this.clear()
        }
 
-       clear ()
-       {
-this.currentOperand = ''
-this.previousOperand = ''
-this.operation = undefined
+clear ()  {
+        this.currentOperand = ''
+        this.previousOperand = ''
+        this.operation = undefined
   }
 
        delete ()
@@ -18,24 +17,23 @@ this.operation = undefined
     }
 
     appendNumber(number) {
-
+        if (number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toSting() + number.toString()
     }
     chooseOperation(operation){
 
     }
 
-    compute ()
+    compute ()   //take values and compute into a single value
     {
 
     }
 
 upateDisplay() {
+    this.currentOperandTextElement.innerText = this.currentOperand
+    }
 
 }
-
-}
-
-
 
 
 
@@ -47,4 +45,12 @@ const allClearButton = document.querySelectorAll('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
-const calculator = new Calculator (previousOperandTextElement, currentOperandTextElement)
+const calculator = new Calculator (previousOperandTextElement, currentOperandTextElement)  //create object
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+            })
+
+})
