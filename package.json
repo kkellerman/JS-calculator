@@ -1,0 +1,19 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "Vanilla JS Calculator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cellarman/JS-calculator.git"
+  },
+  "author": "Keith Kellerman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cellarman/JS-calculator/issues"
+  },
+  "homepage": "https://github.com/cellarman/JS-calculator#readme"
+}
