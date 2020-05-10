@@ -1,3 +1,4 @@
+
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
       this.previousOperandTextElement = previousOperandTextElement
@@ -124,3 +125,5 @@ class Calculator {
     calculator.delete()
     calculator.updateDisplay()
   })
+
+  
